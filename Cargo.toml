@@ -9,10 +9,10 @@ members = ["crates/*"]
 [workspace.package]
 authors = ["pixi contributors <hi@prefix.dev>"]
 edition = "2024"
-homepage = "https://github.com/prefix-dev/pixi"
+homepage = "https://github.com/xhochy/pixi"
 license = "BSD-3-Clause"
 readme = "README.md"
-repository = "https://github.com/prefix-dev/pixi"
+repository = "https://github.com/xhochy/pixi"
 
 [workspace.dependencies]
 ahash = "0.8.11"
