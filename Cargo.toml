@@ -195,7 +195,7 @@ license.workspace = true
 name = "pixi"
 readme.workspace = true
 repository.workspace = true
-version = "0.55.4"
+version = "0.55.5"
 
 [features]
 default = ["online_tests", "rustls-tls"]
@@ -411,10 +411,7 @@ windows-archive = ".zip"
 unix-archive = ".tar.gz"
 # Target platforms to build apps for (Rust target-triple syntax)
 targets = [
-  "aarch64-apple-darwin",
   "aarch64-unknown-linux-musl",
-  "aarch64-pc-windows-msvc",
-  "x86_64-apple-darwin",
   "x86_64-unknown-linux-musl",
   "x86_64-pc-windows-msvc",
 ]
