@@ -176,7 +176,10 @@ jobs:
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: "target/distrib/*${{ join(matrix.targets, ', ') }}*"
+      - run: cp ${{ steps.attest.outputs.bundle-path }} attestations-${{ join(matrix.targets, ', ').intoto.jsonl
+        shell: bash
       - run: ls -l
+        shell: bash
       - id: cargo-dist
         name: Post-build
         # We force bash here just because github makes it really hard to get values up
@@ -197,6 +200,7 @@ jobs:
           path: |
             ${{ steps.cargo-dist.outputs.paths }}
             ${{ env.BUILD_MANIFEST_NAME }}
+            attestations-${{ join(matrix.targets, ', ').intoto.jsonl
 
   # Build and package all the platform-agnostic(ish) things
   build-global-artifacts:
