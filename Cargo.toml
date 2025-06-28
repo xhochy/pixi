@@ -195,7 +195,7 @@ license.workspace = true
 name = "pixi"
 readme.workspace = true
 repository.workspace = true
-version = "0.55.6"
+version = "0.55.7"
 
 [features]
 default = ["online_tests", "rustls-tls"]
@@ -440,8 +440,8 @@ x86_64-apple-darwin = "macos-latest"
 #x86_64-pc-windows-msvc = "windows_x64_2025_large"
 
 # Linux targets
-#aarch64-unknown-linux-musl = "8core_ubuntu_latest_runner"
-#x86_64-unknown-linux-musl = "8core_ubuntu_latest_runner"
+aarch64-unknown-linux-musl = "ubuntu-latest"
+x86_64-unknown-linux-musl = "ubuntu-latest"
 
 [workspace.metadata.dist.dependencies.apt]
 gcc-aarch64-linux-gnu = { version = '*', targets = [
