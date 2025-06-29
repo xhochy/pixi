@@ -178,7 +178,6 @@ jobs:
         with:
           subject-path: "target/distrib/*${{ join(matrix.targets, ', ') }}*"
       - run: cp ${{ steps.attest.outputs.bundle-path }} attestations-${{ join(matrix.targets, ', ') }}.intoto.jsonl
-        shell: bash
       - run: ls -l
         shell: bash
       - id: cargo-dist
