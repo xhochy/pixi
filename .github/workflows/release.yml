@@ -173,6 +173,7 @@ jobs:
           echo "dist ran successfully"
 
       - name: Attest
+        id: attest
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: "target/distrib/*${{ join(matrix.targets, ', ') }}*"
