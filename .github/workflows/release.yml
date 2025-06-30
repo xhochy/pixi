@@ -200,7 +200,7 @@ jobs:
           path: |
             ${{ steps.cargo-dist.outputs.paths }}
             ${{ env.BUILD_MANIFEST_NAME }}
-            attestations-${{ join(matrix.targets, ', ') }}.intoto.jsonl
+            target/distrib/attestations-${{ join(matrix.targets, ', ') }}.intoto.jsonl
 
   # Build and package all the platform-agnostic(ish) things
   build-global-artifacts:
