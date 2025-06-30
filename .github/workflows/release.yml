@@ -295,6 +295,7 @@ jobs:
       # Unpack binaries, required for setup-pixi
       - name: Unpack binaries tar
         run: |
+          ls -l
           set -e pipefail # fail if any command fails
           mkdir -p unpacked-artifacts
           for artifact in target/distrib/pixi-*.tar.gz; do
