@@ -176,7 +176,7 @@ jobs:
         id: attest
         uses: actions/attest-build-provenance@v1
         with:
-          subject-path: "target/distrib/*${{ join(matrix.targets, ', ') }}*"
+          subject-path: "target/distrib/*${{ join(matrix.targets, ', ') }}"
       - run: cp ${{ steps.attest.outputs.bundle-path }} target/distrib/attestations-${{ join(matrix.targets, ', ') }}.intoto.jsonl
       - run: ls -l
         shell: bash
